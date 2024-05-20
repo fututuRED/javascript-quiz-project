@@ -16,6 +16,7 @@ this.difficulty = difficulty
         }
         return this.choices;
     }
+    
     }
 
     // 2. shuffleChoices()
