@@ -34,13 +34,7 @@ class Quiz {
       this.correctAnswers++;
     }
   }
-  hasEnded() {
-    if (currentQuestionIndex < this.questions.length) {
-      return false;
-    } else if (currentQuestionIndex === this.questions.length) {
-      return true;
-    }
-  }
+
 
   // 6. hasEnded()
   hasEnded() {
@@ -52,6 +46,27 @@ class Quiz {
   }
 
   // 7. filterQuestionsByDifficulty() method
+
+  filterQuestionsByDifficulty(difficulty) {
+    if (typeof difficulty !== 'number' || difficulty < 1 || difficulty > 3) {
+      return this.questions;
+    } 
+    
+    else {
+      let filteredQuestion =[]
+      for (let question of this.questions) {
+        if (question.difficulty === difficulty){
+          filteredQuestion.push(question)
+        }
+        
+      }
+      this.questions = filteredQuestion
+      return filteredQuestion
+    }
+  }
+
+  /*
+// 7. filterQuestionsByDifficulty() method
 
   filterQuestionsByDifficulty(difficulty) {
     if (3 > difficulty > 1) {
@@ -68,12 +83,12 @@ class Quiz {
   /*
 
 */
+*/
   averageDifficulty() {
-    this.questions.reduce(function((accumulator, questions.difficulty))=>
-   return accumulator + questions.difficulty)
-  
-  }
     //array.reduce(accumulator, currentValue) => accumulator + current Value
     // Sum of difficulties of each question / nb of questions
+    this.questions.reduce(function((accumulator, questions.difficulty))=>
+      return accumulator + questions.difficulty)
+     
   }
 
