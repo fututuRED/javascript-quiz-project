@@ -5,7 +5,6 @@ class Quiz {
     this.timeLimit = timeLimit;
     this.timeRemaining = timeRemaining;
     this.correctAnswers = 0;
-    // \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     this.currentQuestionIndex = 0;
   }
   // 2. getQuestion()
@@ -70,7 +69,11 @@ class Quiz {
 
 */
   averageDifficulty() {
+    this.questions.reduce(function((accumulator, questions.difficulty))=>
+   return accumulator + questions.difficulty)
+  
+  }
     //array.reduce(accumulator, currentValue) => accumulator + current Value
     // Sum of difficulties of each question / nb of questions
   }
-}
+
