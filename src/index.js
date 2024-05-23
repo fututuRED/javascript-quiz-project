@@ -54,7 +54,9 @@ document.addEventListener("DOMContentLoaded", () => {
   timeRemainingContainer.innerText = `${minutes}:${seconds}`;
 
   // Show first question
-  showQuestion();
+  showQuestion()
+  
+  ;
 
 
   /************  TIMER  ************/
@@ -99,17 +101,25 @@ document.addEventListener("DOMContentLoaded", () => {
     // 1. Show the question
     // Update the inner text of the question container element and show the question text
 
+  
+document.getElementById("question").innerText = question
+
     
     // 2. Update the green progress bar
     // Update the green progress bar (div#progressBar) width so that it shows the percentage of questions answered
-    
+    const prodressResult= document.getElementById("#result-progress")
+
+    const progressBar =document.getElementById("#progressBar") //questions answered?
+
+    progressBar = math.floor(100% - progressResult)
     progressBar.style.width = `65%`; // This value is hardcoded as a placeholder
 
 
 
     // 3. Update the question count text 
     // Update the question count (div#questionCount) show the current question out of total questions
-    
+  
+    const questionCount = 10 - indexOf.quiz.question()
     questionCount.innerText = `Question 1 of 10`; //  This value is hardcoded as a placeholder
 
 
@@ -127,8 +137,18 @@ document.addEventListener("DOMContentLoaded", () => {
       // Hint 2: You can use the `element.type`, `element.name`, and `element.value` properties to set the type, name, and value of an element.
       // Hint 3: You can use the `element.appendChild()` method to append an element to the choices container.
       // Hint 4: You can use the `element.innerText` property to set the inner text of an element.
-
-  }
+      function addRadioButtons() {
+        const choices = ["Option 1", "Option 2", "Option 3","Option4"];
+        const groupName = "choice"; 
+        let radioHTML = '';
+    
+        choices.forEach((choice) => {
+          radioHTML += `
+            <input type="radio" id="${choice}" name="${groupName}" value="${choice}">
+            <label for="${choice}">${choice}</label>
+            <br>`;
+        });
+        document.getElementById('radioContainer').innerHTML = radioHTML;
 
 
   
