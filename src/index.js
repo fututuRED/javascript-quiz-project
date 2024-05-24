@@ -54,7 +54,9 @@ document.addEventListener("DOMContentLoaded", () => {
   timeRemainingContainer.innerText = `${minutes}:${seconds}`;
 
   // Show first question
-  showQuestion();
+  showQuestion()
+  
+  ;
 
 
   /************  TIMER  ************/

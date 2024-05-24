@@ -5,7 +5,6 @@ class Quiz {
     this.timeLimit = timeLimit;
     this.timeRemaining = timeRemaining;
     this.correctAnswers = 0;
-    // \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     this.currentQuestionIndex = 0;
   }
   // 2. getQuestion()
@@ -67,14 +66,29 @@ class Quiz {
   }
 
   /*
+// 7. filterQuestionsByDifficulty() method
+
+  filterQuestionsByDifficulty(difficulty) {
+    if (3 > difficulty > 1) {
+      return this.questions;
+    } else {
+      for (let question in this.questions) {
+        return this.questions.filter(
+          (difficul) => (this.questions.difficulty = difficul)
+        );
+      }
+    }
+  }
+
+  /*
 
 */
+*/
   averageDifficulty() {
-
-    
-    const sum = this.questions.reduce((accum, val)=> accum+val.difficulty,0)
-     return sum/this.questions.length
     //array.reduce(accumulator, currentValue) => accumulator + current Value
     // Sum of difficulties of each question / nb of questions
+    this.questions.reduce(function((accumulator, questions.difficulty))=>
+      return accumulator + questions.difficulty)
+     
   }
-}
+
