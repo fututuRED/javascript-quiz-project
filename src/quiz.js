@@ -83,12 +83,14 @@ class Quiz {
   /*
 
 */
-*/
+
   averageDifficulty() {
     //array.reduce(accumulator, currentValue) => accumulator + current Value
     // Sum of difficulties of each question / nb of questions
-    this.questions.reduce(function((accumulator, questions.difficulty))=>
-      return accumulator + questions.difficulty)
-     
-  }
+    this.questions.reduce((accumulator, question)=> {
+      return accumulator + question.difficulty
 
+    }
+     
+  )}
+}
