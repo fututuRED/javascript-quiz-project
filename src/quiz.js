@@ -29,11 +29,11 @@ class Quiz {
   // 5. checkAnswer(answer)
   checkAnswer(answer) {
     if (answer === this.questions[this.currentQuestionIndex].answer)
-      console.log("In answer", answer);
-    console.log(this.questions);
-    {
-      this.correctAnswers++;
-    }
+      {
+          console.log("In answer", answer);
+        console.log(this.questions);
+        this.correctAnswers++;
+      }
   }
 
 
